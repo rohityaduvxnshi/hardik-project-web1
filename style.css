@@ -1,0 +1,93 @@
+/* Simple CSS for beginner level railway project */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container-box {
+    width: 92%;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.login-box {
+    border-top: 5px solid #1d4ed8;
+}
+
+.train-logo {
+    font-size: 45px;
+    margin-bottom: 8px;
+}
+
+.simple-input {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    padding: 9px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.simple-input:focus {
+    border-color: #1d4ed8;
+}
+
+.train-card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-left: 5px solid #1d4ed8;
+    padding: 16px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.train-card h3 {
+    color: #1d4ed8;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.train-card p {
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+.small-card {
+    background-color: white;
+    padding: 14px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+    color: #374151;
+}
+
+.profile-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin: auto;
+}
+
+.profile-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px 0;
+    color: #374151;
+}
+
+@media (max-width: 600px) {
+    .profile-row {
+        display: block;
+    }
+
+    .profile-row span {
+        display: block;
+        margin-top: 4px;
+    }
+}
