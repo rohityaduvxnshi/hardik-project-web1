@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Home</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-blue-700 text-white p-4">
+        <div class="container-box flex flex-col sm:flex-row justify-between items-center gap-3">
+            <h1 class="text-xl font-bold">🚆 Railway Booking</h1>
+            <div class="flex gap-4 text-sm">
+                <a href="home.html" class="hover:underline">Home</a>
+                <a href="profile.html" class="hover:underline">Profile</a>
+                <button onclick="logoutUser()" class="hover:underline">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-box py-6">
+
+        <section class="bg-white p-5 rounded shadow-sm mb-6">
+            <h2 class="text-2xl font-bold text-blue-700">Welcome, <span id="showUser">User</span></h2>
+            <p class="text-gray-600 mt-1">Book train tickets easily with this simple student project.</p>
+        </section>
+
+        <section class="bg-white p-5 rounded shadow-sm mb-6">
+            <h2 class="text-xl font-bold mb-4 text-gray-800">Search Trains</h2>
+
+            <form id="searchForm" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                    <label class="block mb-1 text-gray-700">From</label>
+                    <input type="text" id="fromStation" class="simple-input" placeholder="Delhi">
+                </div>
+
+                <div>
+                    <label class="block mb-1 text-gray-700">To</label>
+                    <input type="text" id="toStation" class="simple-input" placeholder="Mumbai">
+                </div>
+
+                <div>
+                    <label class="block mb-1 text-gray-700">Date</label>
+                    <input type="date" id="travelDate" class="simple-input">
+                </div>
+
+                <div class="flex items-end">
+                    <button type="submit" class="bg-blue-700 text-white py-2 px-5 rounded w-full hover:bg-blue-800">
+                        Search
+                    </button>
+                </div>
+            </form>
+
+            <p id="searchMsg" class="mt-3 text-sm text-gray-700"></p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-xl font-bold mb-3 text-gray-800">Popular Routes</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="small-card">Delhi to Mumbai</div>
+                <div class="small-card">Delhi to Jaipur</div>
+                <div class="small-card">Kolkata to Patna</div>
+                <div class="small-card">Chennai to Bengaluru</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold mb-3 text-gray-800">Available Trains</h2>
+            <div id="trainList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Train cards come from JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+        <p>Contact: railwayhelp@example.com | Phone: 011-12345678</p>
+        <p class="text-sm text-gray-300 mt-1">Made for college frontend project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
